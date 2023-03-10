@@ -9,7 +9,7 @@ var menorAltura = 0
 
 for(var i = 1; i <= 15; i++) {
     altura = parseFloat(prompt("Informe a altura da "+i+"ª pessoa:"));
-    sexo = prompt("Informe o sexo da "+i+"ª pessoa (M para Masculino e F para Feminino):");
+    sexo = prompt("Informe o sexo da "+i+"ª pessoa (M para Masculino e F para Feminino):").toUpperCase;
     if (sexo == "M") {
         totalMasculino++ ;
         somaAlturaMasculino += altura;
@@ -39,6 +39,10 @@ alert("Menor altura informada: "+menorAltura+" m");
 if (totalMasculino > 0) {
     mediaAlturaMasculino = somaAlturaMasculino / totalMasculino;
     alert("Média de altura dos homens: "+mediaAlturaMasculino+" m");
+
+}
+else if (totalMasculino == 0){
+    ("Nenhum homem foi informado!");
 }
 
 alert("Número de mulheres que responderam: "+totalFeminino+" ");
